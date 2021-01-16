@@ -35,9 +35,9 @@ jobs:
       - name: Install Yarn
         uses: Borales/actions-yarn@v2.3.0 
         
-      - name: Run Yarn
-        run: yarn start
+      - name: Install Surge
+        run : npm install -g surge
       - name: Build Folder
         run: yarn build
       - name: Deploy to surge
-        run: surge ./build demo-app22.surge.sh --token ${{secrets.Surge_Token}}
+        run: surge ./build http://demo-app22.surge.sh/ --token ${{secrets.Surge_Token}}
