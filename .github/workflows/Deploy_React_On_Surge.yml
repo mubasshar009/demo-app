@@ -41,4 +41,4 @@ jobs:
       - name: Build Folder
         run: yarn build
       - name: Deploy to surge
-        run: surge ./build demo-app22.surge.sh --token ${{secrets.Surge_Token)}}
+        run: surge ./build demo-app22.surge.sh --token ${{secrets.Surge_Token}}
